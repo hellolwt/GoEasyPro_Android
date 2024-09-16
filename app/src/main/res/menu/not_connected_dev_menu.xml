@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/try_connect"
+        android:icon="@drawable/connect_symbol"
+        android:title="@string/str_try_to_connect" />
+    <item android:id="@+id/del_device"
+        android:icon="@drawable/delete_symbol"
+        android:title="@string/str_delete_device" />
+</menu>

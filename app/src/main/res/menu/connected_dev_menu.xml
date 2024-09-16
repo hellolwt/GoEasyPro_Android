@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.MainActivity" >
+
+    <item
+        android:id="@+id/control"
+        android:icon="@drawable/control_symbol"
+        android:title="@string/str_device_control">
+        <menu>
+            <item
+                android:id="@+id/shutter_on"
+                android:icon="@drawable/shutter2_symbol"
+                android:title="@string/str_enable_shutter" />
+            <item
+                android:id="@+id/shutter_off"
+                android:icon="@drawable/shutter2_off_symbol"
+                android:title="@string/str_disable_shutter" />
+            <item android:id="@+id/mode_select"
+                android:icon="@drawable/mode_select_symbol"
+                android:title="@string/str_camera_mode">
+                <menu>
+                    <item
+                        android:id="@+id/mode_video"
+                        android:title="@string/str_video" >
+                        <menu>
+                            <item
+                                android:id="@+id/mode_video_single"
+                                android:title="@string/str_single" />
+                            <item
+                                android:id="@+id/mode_video_timelapse"
+                                android:title="@string/str_time_lapse" />
+                        </menu>
+                    </item>
+
+                    <item
+                        android:id="@+id/mode_photo"
+                        android:title="@string/str_photo" >
+                        <menu>
+                            <item
+                                android:id="@+id/mode_photo_single"
+                                android:title="@string/str_single" />
+                            <item
+                                android:id="@+id/mode_photo_night"
+                                android:title="@string/str_night" />
+                        </menu>
+                    </item>
+
+                    <item
+                        android:id="@+id/mode_multishot"
+                        android:title="@string/str_multishot" >
+                        <menu>
+                            <item
+                                android:id="@+id/mode_multishot_burst"
+                                android:title="@string/str_burst" />
+                            <item
+                                android:id="@+id/mode_multishot_timelapse"
+                                android:title="@string/str_time_lapse" />
+                            <item
+                                android:id="@+id/mode_multishot_nightlapse"
+                                android:title="@string/str_night_lapse" />
+                        </menu>
+                    </item>
+                </menu>
+            </item>
+
+            <item android:id="@+id/preset_select"
+                android:icon="@drawable/preset_symbol"
+                android:title="Preset">
+                <menu>
+                    <item
+                        android:id="@+id/preset_standard"
+                        android:title="Standard">
+                    </item>
+                    <item
+                        android:id="@+id/preset_activity"
+                        android:title="Activity">
+                    </item>
+                    <item
+                        android:id="@+id/preset_cinematic"
+                        android:title="Cinematic">
+                    </item>
+                    <item
+                        android:id="@+id/preset_photo"
+                        android:title="Photo">
+                    </item>
+                    <item
+                        android:id="@+id/preset_liveBurst"
+                        android:title="Live Burst">
+                    </item>
+                    <item
+                        android:id="@+id/preset_burstPhoto"
+                        android:title="Burst Photo">
+                    </item>
+                    <item
+                        android:id="@+id/preset_nightPhoto"
+                        android:title="Night Photo">
+                    </item>
+                    <item
+                        android:id="@+id/preset_timeWarp"
+                        android:title="Time Warp">
+                    </item>
+                    <item
+                        android:id="@+id/preset_timeLapse"
+                        android:title="Time Lapse">
+                    </item>
+                    <item
+                        android:id="@+id/preset_nightLapse"
+                        android:title="Night Lapse">
+                    </item>
+                </menu>
+            </item>
+
+            <item
+                android:id="@+id/locate_on"
+                android:icon="@drawable/radar_symbol"
+                android:title="@string/str_enable_localization" />
+            <item
+                android:id="@+id/locate_off"
+                android:icon="@drawable/radar_off_symbol"
+                android:title="@string/str_disable_localization" />
+            <item
+                android:id="@+id/put_sleep"
+                android:icon="@drawable/sleep_symbol"
+                android:title="@string/str_put_to_sleep" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/connection"
+        android:icon="@drawable/connect_symbol"
+        android:title="@string/str_connection">
+        <menu>
+            <item
+                android:id="@+id/ap_on"
+                android:icon="@drawable/wifi_on_symbol"
+                android:title="@string/str_enable_wifi_ap" />
+            <item
+                android:id="@+id/ap_off"
+                android:icon="@drawable/wifi_off_symbol"
+                android:title="@string/str_disable_wifi_ap" />
+            <item
+                android:id="@+id/disconnect"
+                android:icon="@drawable/disconnect_symbol"
+                android:title="@string/str_disconnect" />
+            <item
+                android:id="@+id/del_device"
+                android:icon="@drawable/delete_symbol"
+                android:title="@string/str_delete_device" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/media"
+        android:icon="@drawable/collections_symbol"
+        android:title="@string/str_media">
+        <menu>
+            <item
+                android:id="@+id/preview"
+                android:icon="@drawable/preview_symbol"
+                android:title="@string/str_start_live_preview" />
+            <item
+                android:id="@+id/browse"
+                android:icon="@drawable/sd_card_symbol"
+                android:title="@string/str_browse_storage" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/none"
+        android:icon="@drawable/settings_symbol"
+        android:title="@string/str_device_settings" >
+
+        <menu>
+            <item
+                android:id="@+id/set_date_time"
+                android:icon="@drawable/clock_symbol"
+                android:title="@string/str_set_date_time" />
+            <item
+                android:id="@+id/dev_settings"
+                android:icon="@drawable/settings_symbol"
+                android:title="@string/str_device_settings_setup" />
+            <item
+                android:id="@+id/sync_settings"
+                android:icon="@drawable/sync_symbol"
+                android:title="@string/str_sync_settings" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/dev_rename"
+        android:icon="@drawable/rename_symbol"
+        android:title="@string/str_rename_device" />
+
+    <item
+        android:id="@+id/dev_info"
+        android:icon="@drawable/info_symbol"
+        android:title="@string/str_device_information" />
+</menu>

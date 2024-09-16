@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    tools:context=".StorageBrowserActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:id="@+id/main_media_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imagePlayer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Player"
+                android:onClick="onImgClick"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_baseline_no_photography_24" />
+
+            <com.google.android.exoplayer2.ui.StyledPlayerView
+                android:id="@+id/vid_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:keepScreenOn="true"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:visibility="visible"
+                app:buffered_color="#C1A5A5A5"
+                app:played_color="#009FE0"
+                app:resize_mode="fit"
+                app:show_buffering="always"
+                app:show_shuffle_button="true"
+                app:unplayed_color="#C15A5A5A"
+                app:use_controller="true">
+
+            </com.google.android.exoplayer2.ui.StyledPlayerView>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="0dp"
+            android:paddingVertical="1dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="@string/str_Content"
+                android:textColor="@color/light_blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/dl_menu_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="Download menu button"
+                android:onClick="onDlMenuClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/download_symbol"
+                app:tint="#555"
+                tools:ignore="RedundantDescriptionCheck,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/del_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="Delete button"
+                android:onClick="onDelBtnClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dl_menu_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/delete_symbol"
+                app:tint="#555"
+                tools:ignore="RedundantDescriptionCheck,ImageContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ListView
+            android:id="@+id/file_listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:choiceMode="singleChoice"
+            android:listSelector="@drawable/listitem_selector"
+            tools:listitem="@layout/filelist_item" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

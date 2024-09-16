@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <PreferenceCategory app:title="App Settings">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="check_app_update"
+            android:title="@string/str_Check_update"
+            app:summary="@string/str_Check_update_desc" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="auto_connect"
+            android:title="@string/str_Automatically_connect"
+            app:summary="@string/str_Automatically_connect_desc" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Cameras">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="ignore_auto_off"
+            android:title="@string/str_Ignore_auto_off"
+            app:summary="@string/str_Ignore_auto_off_desc" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="keep_alive_when_paused"
+            android:title="@string/str_keep_alive_at_pause"
+            app:summary="@string/str_keep_alive_at_pause_desc" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="check_firmware"
+            android:title="@string/str_Check_firmware"
+            app:summary="@string/str_Check_firmware_desc" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
